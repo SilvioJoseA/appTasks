@@ -1,0 +1,82 @@
+Claro, aquí tienes un desafío para un puesto semisenior en Node.js con una base de datos SQL:
+
+Desafío: Sistema de Gestión de Tareas
+Descripción
+Crea una aplicación de gestión de tareas utilizando Node.js y una base de datos SQL. La aplicación debe permitir a los usuarios realizar las siguientes acciones:
+
+Registrar y Autenticar Usuarios
+
+Registro de nuevos usuarios.
+Inicio de sesión de usuarios existentes.
+Gestión de Tareas
+
+Crear una nueva tarea.
+Listar todas las tareas de un usuario.
+Actualizar una tarea existente.
+Eliminar una tarea.
+Marcar una tarea como completada.
+Requisitos Técnicos
+Node.js
+
+Usa express para crear el servidor.
+Organiza tu proyecto en controladores y modelos.
+Base de Datos SQL
+
+Utiliza pg para conectarte a PostgreSQL (o el módulo correspondiente si prefieres otra base de datos SQL).
+Diseña la base de datos con al menos dos tablas: users y tasks.
+Autenticación y Autorización
+
+Implementa autenticación usando JWT.
+Asegura las rutas de tareas para que solo el usuario autenticado pueda acceder a sus propias tareas.
+Validación
+
+Realiza la validación de entradas del usuario en el servidor.
+Manejo de Errores
+
+Maneja adecuadamente los errores y devuelve respuestas apropiadas.
+Estructura del Proyecto
+lua
+Copiar código
+project-root/
+│
+├── controllers/
+│   ├── authController.js
+│   └── taskController.js
+│
+├── models/
+│   ├── userModel.js
+│   └── taskModel.js
+│
+├── routes/
+│   ├── authRoutes.js
+│   └── taskRoutes.js
+│
+├── middlewares/
+│   ├── authMiddleware.js
+│
+├── config/
+│   ├── db.js
+│
+├── app.js
+├── package.json
+└── .env
+Endpoints
+Autenticación
+
+POST /api/register: Registra un nuevo usuario.
+POST /api/login: Inicia sesión de un usuario.
+Tareas
+
+POST /api/tasks: Crea una nueva tarea.
+GET /api/tasks: Lista todas las tareas del usuario.
+PUT /api/tasks/:id: Actualiza una tarea existente.
+DELETE /api/tasks/:id: Elimina una tarea.
+PATCH /api/tasks/:id/complete: Marca una tarea como completada.
+Puntos Adicionales
+Escribe pruebas unitarias para los controladores.
+Documenta tus endpoints utilizando Swagger o una herramienta similar.
+Implementa una interfaz de usuario básica con cualquier framework front-end de tu elección (opcional).
+Entregables
+Código fuente del proyecto.
+Instrucciones claras sobre cómo ejecutar el proyecto y cómo configurar la base de datos.
+Documentación de la API (si implementaste la documentación).
